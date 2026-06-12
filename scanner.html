@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Scanner - RABBANI IBM SKILL BUILD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">RABBANI IBM SKILL BUILD</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="scanner.html" class="active">Scanner</a></li>
+            <li><a href="password.html">Password Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <h1>Cyber Threat Scanner</h1>
+        <p>Demo Tool for Identifying Potential Threats</p>
+    </section>
+
+    <!-- Scanner Section -->
+    <section class="scanner-section">
+
+        <div class="scanner-box">
+
+            <h2>Enter Website URL</h2>
+
+            <input
+                type="text"
+                id="websiteInput"
+                placeholder="Example: www.example.com">
+
+            <br><br>
+
+            <button onclick="scanWebsite()" class="btn">
+                Scan Website
+            </button>
+
+            <div id="scanResult" class="result-box">
+                Waiting for Scan...
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Information -->
+    <section class="content-section">
+
+        <div class="info-card">
+            <h2>What Does a Threat Scanner Do?</h2>
+
+            <p>
+                A threat scanner helps identify suspicious
+                activities, malware risks, phishing attempts,
+                and vulnerabilities in websites or systems.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2>Common Threat Indicators</h2>
+
+            <ul>
+                <li>Unknown Links</li>
+                <li>Suspicious Downloads</li>
+                <li>Phishing Emails</li>
+                <li>Fake Login Pages</li>
+                <li>Malicious Scripts</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Navigation Buttons -->
+    <section class="navigation-buttons">
+
+        <a href="about.html" class="btn">
+            ⬅ Previous
+        </a>
+
+        <a href="password.html" class="btn">
+            Next ➜
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 RABBANI IBM SKILL BUILD |
+            Cyber Security Project
+        </p>
+    </footer>
+
+    <script>
+
+        function scanWebsite() {
+
+            let input =
+            document.getElementById("websiteInput").value;
+
+            let result =
+            document.getElementById("scanResult");
+
+            if(input === ""){
+
+                result.innerHTML =
+                "⚠ Please enter a website URL.";
+
+                result.style.color = "orange";
+
+            }
+
+            else{
+
+                let random =
+                Math.floor(Math.random() * 100);
+
+                if(random > 50){
+
+                    result.innerHTML =
+                    "✅ Website appears SAFE. No major threats detected.";
+
+                    result.style.color = "lightgreen";
+
+                }
+
+                else{
+
+                    result.innerHTML =
+                    "⚠ Potential Risk Detected. Further analysis recommended.";
+
+                    result.style.color = "red";
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
