@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RABBANI IBM SKILL BUILD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">RABBANI IBM SKILL BUILD</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="scanner.html">Scanner</a></li>
+            <li><a href="password.html">Password Checker</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>Send your feedback or questions</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="scanner-section">
+
+        <div class="scanner-box">
+
+            <h2>Get In Touch</h2>
+
+            <form onsubmit="sendMessage(event)">
+
+                <input type="text"
+                id="name"
+                placeholder="Your Name"
+                required>
+
+                <br><br>
+
+                <input type="email"
+                id="email"
+                placeholder="Your Email"
+                required>
+
+                <br><br>
+
+                <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required></textarea>
+
+                <br><br>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+            <br>
+
+            <div id="successMessage"
+            class="result-box">
+                Waiting...
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Project Information -->
+    <section class="content-section">
+
+        <div class="info-card">
+            <h2>Project Details</h2>
+
+            <p>
+                Project Name:
+                <strong>RABBANI IBM SKILL BUILD</strong>
+            </p>
+
+            <p>
+                Subject:
+                Cyber Security Awareness
+            </p>
+
+            <p>
+                Developed for Educational Purpose.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Navigation -->
+    <section class="navigation-buttons">
+
+        <a href="password.html" class="btn">
+            ⬅ Previous
+        </a>
+
+        <a href="index.html" class="btn">
+            Home
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 RABBANI IBM SKILL BUILD |
+            Cyber Security Project
+        </p>
+    </footer>
+
+<script>
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    document.getElementById("successMessage")
+    .innerHTML =
+    "✅ Message Sent Successfully!";
+
+}
+
+</script>
+
+</body>
+</html>
